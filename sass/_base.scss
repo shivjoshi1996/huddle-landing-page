@@ -84,9 +84,9 @@ p {
 // Header CSS 
 
 .header {
-    padding-top: 2rem;
     width: 80%;
     margin: 0 auto;
+    margin-top: 2rem;
 
     &__logo {
         width: 8rem;
@@ -98,8 +98,8 @@ p {
 
 .hero {
     width: 80%;
-    padding-top: 4rem;
     margin: 0 auto;
+    margin-top: 4rem;
 
     &__image {
         width: 100%;
@@ -111,19 +111,20 @@ p {
 
     &__heading {
         font-size: 1.9rem;
-        padding-top: 2rem;
+        margin-top: 2rem;
         line-height: 2.5rem;
         color: white;
     }
 
     &__description {
-        padding-top: 1rem;
+        margin-top: 1rem;
         color: white;
         line-height: 1.5rem;
     }
 
     &__button {
         margin-top: 2rem;
+        background-color: white;
     }
 
 }
@@ -131,8 +132,8 @@ p {
 //Footer CSS
 
 .footer {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     text-align: center;
 
     &__icons i {
@@ -145,12 +146,12 @@ p {
         margin-right: 0.25rem;
     }
 
-    &__links {
+    &__link {
         transition: 0.5s;
     }
 
-    &__links:hover {
-        opacity: 0.7;
+    &__link:hover {
+        opacity: 0.5;
     }
 }
 
@@ -189,7 +190,7 @@ p {
         height: 15vh;
         display: flex;
         align-items: center;
-        padding-top: unset;
+        margin-top: unset;
 
         &__logo {
             width: 15rem;
@@ -199,7 +200,7 @@ p {
     .hero {
         height: 70vh;
         display: flex;
-        padding-top: unset;
+        margin-top: unset;
         align-items: center;
 
         &__image-container {
@@ -214,7 +215,7 @@ p {
 
         &__heading {
             line-height: 1.5em;
-            padding-top: unset;
+            margin-top: unset;
         }
 
     }
@@ -225,7 +226,7 @@ p {
         justify-content: flex-end;
         margin: 0 auto;
         height: 15vh;
-        padding-top: unset;
+        margin-top: unset;
         padding-bottom: unset;
         align-items: center;
 
