@@ -1,3 +1,9 @@
+//Variables
+
+$primary-color:  hsl(257, 40%, 49%);
+$heading-font: 'Poppins', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -19,7 +25,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 1em;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -47,6 +53,211 @@ table {
 	border-spacing: 0;
 }
 
-$primary-color:  hsl(257, 40%, 49%);
-$heading-font: 'Poppins', sans-serif;
-$body-font: 'Open Sans', sans-serif;
+//Animation
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+//Custom base styles
+
+h1 {
+    font-family: $heading-font;
+    font-weight: 700;
+}
+
+p {
+    font-family: $body-font;
+}
+
+.body {
+    background-color: $primary-color;
+    background-image: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+// Header CSS 
+
+.header {
+    padding-top: 2rem;
+    width: 80%;
+    margin: 0 auto;
+
+    &__logo {
+        width: 8rem;
+    }
+}
+
+
+// Hero CSS
+
+.hero {
+    width: 80%;
+    padding-top: 4rem;
+    margin: 0 auto;
+
+    &__image {
+        width: 100%;
+    }
+
+    &__content-container {
+        text-align: center;
+    }
+
+    &__heading {
+        font-size: 1.9rem;
+        padding-top: 2rem;
+        line-height: 2.5rem;
+        color: white;
+    }
+
+    &__description {
+        padding-top: 1rem;
+        color: white;
+        line-height: 1.5rem;
+    }
+
+    &__button {
+        margin-top: 2rem;
+    }
+
+}
+
+//Footer CSS
+
+.footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+
+    &__icons i {
+        color: white;
+        width: 15px;
+        padding: 0.5rem;
+        border: 1px solid white;
+        border-radius: 100px;
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+    }
+
+    &__links {
+        transition: 0.5s;
+    }
+
+    &__links:hover {
+        opacity: 0.7;
+    }
+}
+
+
+// Button component CSS
+
+.button {
+    font-size: 1rem;
+    padding: 0.8em 4em 0.8em 4em;
+    border-radius: 100px;
+    border: none;
+    color: $primary-color;
+    -webkit-box-shadow: 5px 11px 15px -3px rgba(0,0,0,0.47); 
+    box-shadow: 5px 11px 15px -3px rgba(0,0,0,0.47);
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+
+// Media Queries
+
+@media only screen and (min-width: 50em) {
+
+    .body {
+        background-image: url(../images/bg-desktop.svg);
+        background-size: cover;
+        max-width: 90rem;
+        margin: 0 auto;
+    }
+
+    .header {
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        padding-top: unset;
+
+        &__logo {
+            width: 15rem;
+        }
+    }
+    
+    .hero {
+        height: 70vh;
+        display: flex;
+        padding-top: unset;
+        align-items: center;
+
+        &__image-container {
+            width: 55%;
+        }
+        
+        &__content-container {
+            width: 45%;
+            text-align: left;
+            margin-left: 2rem;
+        }
+
+        &__heading {
+            line-height: 1.5em;
+            padding-top: unset;
+        }
+
+    }
+
+    .footer {
+        display: flex;
+        width: 80%;
+        justify-content: flex-end;
+        margin: 0 auto;
+        height: 15vh;
+        padding-top: unset;
+        padding-bottom: unset;
+        align-items: center;
+
+        &__icons i {
+            width: 20px;
+            padding: 0.5rem;
+            border-radius: 100px;
+            font-size: 1.2rem;
+        }
+
+    }
+   
+   
+  }
+
+
+
+@media only screen and (min-width: 77.5rem) {
+
+    .hero {
+
+        &__heading {
+            font-size: 2.5rem;
+        }
+
+        &__description {
+            font-size: 1.1rem;
+        }
+
+        &__button {
+            font-size: 1.1rem;
+        }
+
+    }
+}
